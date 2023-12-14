@@ -1,24 +1,19 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import AppRoutes from './appRoutes';
+import { MyContext } from './context/myContext';
 
 function App() {
+  const [emailLen, setEmailLen] = useState(localStorage["emailLen"]? localStorage.getItem("emailLen"):0);
+  const [colLen, setColLen] = useState(localStorage["colLen"]? localStorage.getItem("colLen"):0);
+  const [rowLen, setRowLen] = useState(localStorage["rowLen"]? localStorage.getItem("rowLen"):0);
+  const [pacAn, setPacAn] = useState(localStorage["pacAn"]? localStorage.getItem("pacAn"):0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MyContext.Provider value={{
+      emailLen,setEmailLen,colLen,setColLen,rowLen,setRowLen,pacAn,setPacAn
+    }}>
+      <AppRoutes />
+    </MyContext.Provider>
   );
 }
 

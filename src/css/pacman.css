@@ -1,0 +1,70 @@
+/* PacmanIcon.css */
+
+.pacBtn{
+    min-height: 200px;
+    max-width: 400px;
+    border: 2px dashed black;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+.ready{
+    position: absolute;
+    top: 50px;
+    left: 150px;  
+}
+.btn-ready{
+    font-weight: 100;
+    font-size: 2em;
+}
+
+
+.pacman-container {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    top: -50px;
+    left: -50px;
+  }
+  
+  .pacman-mouth {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-right: 50px solid white;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0%, -50%);
+    z-index: 1;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  
+  .pacman-eye {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    right: 40%;
+  }
+  
+  /* Optional: Add animation for Pac-Man's mouth opening and closing */
+  @keyframes openCloseMouth {
+    0%, 100% {
+      /* border-right: 50px solid yellow; */
+    }
+    50% {
+      border-right: 0 solid yellow;
+    }
+  }
+  
+  .pacman-mouth {
+    animation: openCloseMouth 0.5s infinite;
+  }
+  

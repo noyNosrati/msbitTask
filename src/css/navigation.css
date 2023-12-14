@@ -1,0 +1,70 @@
+header {
+    padding: 12px;
+    background-color: rgb(2, 2, 2);
+    color: white;
+
+}
+
+header .row {
+    justify-content: space-between;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+li {
+    padding: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 0 8px;
+
+}
+
+a:hover {
+    text-decoration: none;
+    color: orange;
+
+}
+
+.burger {
+    display: none;
+}
+
+@media(max-width:576px) {
+
+    ul {
+        display: block;
+        position: absolute;
+        left: 0px;
+        top: 40px;
+        text-align: start;
+        max-width: 100%; 
+        z-index: 99;
+        border-radius: 0 0 12px 12px;
+        min-height: 150px;
+    }
+    .d-none{
+        display: none;
+    }
+     li{
+        width: 100vw;
+        background-color: black;
+        color: white;
+
+
+    }
+
+
+    .burger {
+        display: block;
+    }
+}
